@@ -1,11 +1,7 @@
-import { Box, Text } from "@kuma-ui/core";
+import Thumbnail from './_thumbnail'
 
 export default function Home() {
   return (
-    <Box as="main">
-      <Text fontSize={24} fontWeight={"bold"}>
-        Welcome to Kuma 🐻‍❄️
-      </Text>
-    </Box>
+    <Thumbnail title='space_cat' />
   );
 }
