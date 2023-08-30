@@ -1,7 +1,7 @@
-import Thumbnail from './_thumbnail'
+import ThumbnailTable from './_thumbnailTable'
 
 export default function Home() {
   return (
-    <Thumbnail title='space_cat' />
+    <ThumbnailTable />
   );
 }
