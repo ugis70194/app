@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import MenuButton from './_menuButton'
 
 export const metadata: Metadata = {
   title: '抱華郷',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="jp">
-      <body>{children}</body>
+      <body>
+        <MenuButton />
+        {children}
+      </body>
     </html>
   )
 }
