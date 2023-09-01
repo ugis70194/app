@@ -4,7 +4,7 @@ import { Grid } from '@kuma-ui/core'
 
 export default function ThumbnailTable() {
   return(
-    <Grid gridTemplateColumns={['repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} gap={4}>
+    <Grid gridTemplateColumns={['repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} gap={4} maxWidth={'100vw'}>
       {
         Titles.map((title) => <Thumbnail title={title} key={title}/>)
       }

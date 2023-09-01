@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Menu from './_header/menu/_menu'
+import Header from './_header/_header'
 
 export const metadata: Metadata = {
   title: '抱華郷',
@@ -15,8 +15,10 @@ export default function RootLayout({
   return (
     <html lang="jp">
       <body>
-        <Menu />
-        {children}
+        <main>
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   )
