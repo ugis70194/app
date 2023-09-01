@@ -1,18 +1,19 @@
 'use client'
 import React, { useContext } from 'react';
 import { MenuContext } from './_menu'
-import { Box } from '@kuma-ui/core'
+import { Box, Flex } from '@kuma-ui/core'
 import Image from 'next/image'
+import { HeaderHeight } from '../_header';
 
 export default function MenuButton() {
   const [MenuOpen, toggle] = useContext(MenuContext);
 
   return (
-    <Box as='button' onClick={toggle} p={4} m={4}>
+    <Box position={'relative'} onClick={toggle} height={HeaderHeight} width={HeaderHeight} right={0}>
       {
         MenuOpen
-        ? <Image src='/icons/cross.svg' alt='menu open' width={50} height={50} />
-        : <Image src='/icons/menu-burger.svg' alt='menu close' width={50} height={50} />
+        ? <Image src='/icons/cross.svg' alt='menu open' fill={true} />
+        : <Image src='/icons/menu-burger.svg' alt='menu close' fill={true} />
       }
     </Box>
   )
