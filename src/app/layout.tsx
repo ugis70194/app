@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import MenuButton from './_menuButton'
+import Menu from './_header/menu/_menu'
 
 export const metadata: Metadata = {
   title: '抱華郷',
   description: 'ほーほけきょ',
+  viewport: 'width=device-width'
 }
 
 export default function RootLayout({
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="jp">
       <body>
-        <MenuButton />
+        <Menu />
         {children}
       </body>
     </html>
