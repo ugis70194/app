@@ -1,8 +1,8 @@
 'use client'
-
 import React, { useContext } from 'react';
 import { MenuContext } from './_menu'
 import { Box } from '@kuma-ui/core'
+import { HeaderHeight } from '../_header'
 
 
 export default function MenuInner(){
@@ -12,9 +12,10 @@ export default function MenuInner(){
     <>
     {
       !MenuOpen ? <></> :
-      <Box position={'absolute'} 
-      height={'100vh'} width={'100vw'} zIndex={2211} 
-      bg={'black'} opacity={0.3}  
+      <Box
+      position={'absolute'} top={HeaderHeight}
+      height={'100vh'} width={'100vw'} m={0} p={0} zIndex={2147483647} 
+      bg={'black'} opacity={0.5}  
       onClick={toggle}>
 
       </Box>
