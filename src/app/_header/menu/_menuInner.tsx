@@ -1,8 +1,13 @@
-'use client'
+import { URL_PREFIX } from '../../_utils/variables'
 import React, { useContext } from 'react';
 import { MenuContext } from './_menu'
 import { Box } from '@kuma-ui/core'
 import { HeaderHeight } from '../_header'
+
+async function loadTextData(title: string){
+  const res = await fetch(`${URL_PREFIX}/${title}/thumbnail.json`);
+  return res.json();
+}
 
 
 export default function MenuInner(){

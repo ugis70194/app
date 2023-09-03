@@ -1,8 +1,6 @@
-'use client'
 import React, {createContext, useReducer } from 'react'
 import MenuButton from './_menuButton'
 import MenuInner from './_menuInner'
-
 
 export const MenuContext = createContext<[boolean, React.DispatchWithoutAction|undefined]>([false, undefined]);
 
