@@ -1,9 +1,15 @@
 import { URL_PREFIX } from './_utils/variables'
 import { jsonLoader } from './_utils/functions'
-import { thumbnail } from './_interfaces/interfaces'
 import { Box, Text, HStack } from "@kuma-ui/core";
 import Image from 'next/image'
 import { Suspense } from 'react';
+
+interface thumbnail {
+  title: string
+  type: string
+  genre: string
+  r18: boolean
+}
 
 function typeBackgroundColor(type: string){
   switch(type){
