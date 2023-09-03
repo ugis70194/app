@@ -1,7 +1,10 @@
-import ThumbnailTable from './_thumbnailTable'
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+
   return (
-    <ThumbnailTable />
+    <main>
+      <Link href="/test">test</Link>
+    </main>
   );
 }

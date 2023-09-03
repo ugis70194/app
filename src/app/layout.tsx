@@ -1,20 +1,20 @@
 import type { Metadata } from 'next'
-import MenuButton from './_menuButton'
+import { css } from '@kuma-ui/core'
+import Banner from './[projects]/_banner'
 
 export const metadata: Metadata = {
   title: '抱華郷',
   description: 'ほーほけきょ',
+  viewport: 'width=device-width'
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout(
+  {children}:
+  {children: React.ReactNode}) 
+{
   return (
-    <html lang="jp">
-      <body>
-        <MenuButton />
+    <html lang="jp" className={css `overflow-x: hidden`}>
+      <body className={css `margin: 0`}>
         {children}
       </body>
     </html>
