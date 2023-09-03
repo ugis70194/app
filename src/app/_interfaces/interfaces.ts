@@ -4,3 +4,7 @@ export interface thumbnail {
   genre: string
   r18: boolean
 }
+
+export interface generalData {
+  titles: string[]
+}

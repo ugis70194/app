@@ -1,13 +1,10 @@
-import Thumbnail from './_thumbnail'
-import { Titles } from './_utils/variables';
 import { Grid } from '@kuma-ui/core'
+import React from 'react'
 
-export default function ThumbnailTable() {
+export default async function ThumbnailTable({children}:{children: React.ReactNode}){
   return(
     <Grid gridTemplateColumns={['repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} gap={4} maxWidth={'100vw'}>
-      {
-        Titles.map((title) => <Thumbnail title={title} key={title}/>)
-      }
+      {children}
     </Grid>
   )
 }
