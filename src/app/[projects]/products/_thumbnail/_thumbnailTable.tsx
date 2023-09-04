@@ -1,5 +1,5 @@
-import { Grid } from '@kuma-ui/core'
 import React from 'react'
+import { Grid } from '@kuma-ui/core'
 
 export default function ThumbnailTable({children}:{children: React.ReactNode}){
   return(

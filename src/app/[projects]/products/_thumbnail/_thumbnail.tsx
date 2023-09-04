@@ -1,7 +1,7 @@
-import { URL_PREFIX } from './_utils/variables'
-import { jsonLoader } from './_utils/functions'
+import { URL_PREFIX } from '../../_utils/variables'
+import { jsonLoader } from '../../_utils/functions'
 import { Box, Text, HStack } from "@kuma-ui/core";
-import Image from 'next/image'
+import ThumbnailImage from './_thumbnailImage';
 import { Suspense } from 'react';
 
 interface thumbnail {
@@ -36,7 +36,7 @@ export default async function Thumbnail(
       </Suspense>
       <Text p={4} textDecoration='underline'>{data.genre}</Text>
       <Box position={'relative'} minHeight={'33vh'} p={0} m={0} bg={'silver'}>
-        <Image src={`/${projectName}/${title}/cover.jpg`} style={{objectFit: 'contain'}} fill={true} alt={title} />
+        <ThumbnailImage projectName={projectName} title={title} isR18={data.r18} />
       </Box>
       <Text p={8} fontWeight='bold'>{data.title}</Text>
       <Box p={8} bg='lightgray' as='button'>サンプル</Box>

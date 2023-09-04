@@ -14,11 +14,11 @@ interface Props {
 }
 
 export default function MenuInner({isOpen, toggle, projectName}: Props){
-  const [workTypes, setWorkTypes] = useState<string[]>([])
+  const [productTypes, setProductTypes] = useState<string[]>([])
   useEffect(() => {
     (async () => {
-      const workTypes: {data: string[]} = await jsonLoader(`${URL_PREFIX}/${projectName}/general/workTypes.json`);
-      setWorkTypes(workTypes.data);
+      const productTypes: {data: string[]} = await jsonLoader(`${URL_PREFIX}/${projectName}/general/productTypes.json`);
+      setProductTypes(productTypes.data);
     })();    
   },[])
 
@@ -33,7 +33,7 @@ export default function MenuInner({isOpen, toggle, projectName}: Props){
       >
         <ul className={css `marign: 0; padding: 0`}>
         {
-          (workTypes).map((type) => (
+          (productTypes).map((type) => (
             <li key={type} className={css `list-style: none`} >
               <Link href={`/${projectName}/products/${type}`} className={css `text-decoration: none`} >
                 <Box height={'10vh'} width={'100%'} m={0} padding={[4,0]}
