@@ -29,8 +29,8 @@ export default async function Thumbnail(
   return (
     <Box p={4}>
       <Suspense fallback={LoadingTypeBox}>
-        <HStack>
-          <Box p={4} bg={typeBackgroundColor(data.type)} color='white'>{data.type}</Box>
+        <HStack gap={4}>
+          <Box p={8} bg={typeBackgroundColor(data.type)} color='white'>{data.type}</Box>
           {data.r18 && <Box p={8} bg='pink' color='white'>R-18</Box>}
         </HStack>
       </Suspense>
