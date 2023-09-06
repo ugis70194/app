@@ -1,8 +1,9 @@
 import { URL_PREFIX } from '../../_utils/variables'
 import { jsonLoader } from '../../_utils/functions'
 import { Box, Text, HStack } from "@kuma-ui/core";
-import ThumbnailImage from './_thumbnailImage';
+import R18Image from './_R18Image';
 import { Suspense } from 'react';
+import Image from 'next/image'
 
 interface thumbnail {
   title: string
@@ -25,6 +26,7 @@ export default async function Thumbnail(
   {projectName: string, title: string}) 
 {
   const data: thumbnail = await jsonLoader(`${URL_PREFIX}/${projectName}/${title}/thumbnail.json`);
+  console.log('render');
 
   return (
     <Box p={4}>
@@ -36,7 +38,10 @@ export default async function Thumbnail(
       </Suspense>
       <Text p={4} textDecoration='underline'>{data.genre}</Text>
       <Box position={'relative'} minHeight={'33vh'} p={0} m={0} bg={'silver'}>
-        <ThumbnailImage projectName={projectName} title={title} isR18={data.r18} />
+      {
+        data.r18 ? <R18Image projectName={projectName} title={title} />
+        : <Image src={`/${projectName}/${title}/cover.jpg`} style={{objectFit: 'contain'}} fill={true} alt={title} />
+      }
       </Box>
       <Text p={8} fontWeight='bold'>{data.title}</Text>
       <Box p={8} bg='lightgray' as='button'>サンプル</Box>
