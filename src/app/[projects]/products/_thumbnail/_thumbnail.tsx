@@ -26,7 +26,6 @@ export default async function Thumbnail(
   {projectName: string, title: string}) 
 {
   const data: thumbnail = await jsonLoader(`${URL_PREFIX}/${projectName}/${title}/thumbnail.json`);
-  console.log('render');
 
   return (
     <Box p={4}>

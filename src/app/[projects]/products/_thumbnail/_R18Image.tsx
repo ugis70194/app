@@ -10,7 +10,6 @@ export default function R18Image(
 {
   const { R18on } = useContext(R18Context);
   const imageSrc = R18on ? `/${projectName}/${title}/cover.jpg` : `/icons/R-18_icon.svg`;
-  console.log("render18");
 
   return (
     <Image src={imageSrc} style={{objectFit: 'contain'}} fill={true} alt={title} />
