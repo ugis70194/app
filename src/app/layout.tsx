@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { css } from '@kuma-ui/core'
-import Banner from './[projects]/_banner'
 
 export const metadata: Metadata = {
   title: '抱華郷',
