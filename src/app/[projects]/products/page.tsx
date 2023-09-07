@@ -4,7 +4,7 @@ import ThumbnailTable from './_thumbnail/_thumbnailTable'
 import Thumbnail from './_thumbnail/_thumbnail'
 
 export default async function Home({params}: {params : {projects: string}}){
-  const productTitles: {data: string[]} = await jsonLoader(`${URL_PREFIX}/${params.projects}/general/titles.json`);
+  const productTitles: {data: string[]} = await jsonLoader(`${URL_PREFIX}/api/${params.projects}/general/titles.json`);
 
   return (
     <ThumbnailTable>
