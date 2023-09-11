@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Image, css } from '@kuma-ui/core'
 
-interface Props {
+export interface Props {
   isOpen: boolean
   toggle: React.DispatchWithoutAction
 }
