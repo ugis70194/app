@@ -6,7 +6,7 @@ import MenuInner from './_menuInner'
 import MenuItemList from './_menuItemList'
 import { Box } from '@kuma-ui/core'
 
-function reducer(state: boolean){
+export function reducer(state: boolean){
   return !state;
 }
 
