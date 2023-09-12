@@ -23,9 +23,12 @@ export default function SampleViewer({ imgURLs }:{imgURLs: string[]}){
   const maxPage = imgURLs.length;
   return (
     <VStack justifyContent={'center'} margin={[0,0,0,0]}>
-      <Box position={'relative'} width={'100vw'} maxWidth={'600px'} height={'80vh'} margin={0}
+      <Box position={'relative'} width={'100vw'} maxWidth={'600px'} height={'80vh'} margin={'auto'} justifyContent={'center'}
       >
-        <Image src={imgURLs[pageNumber]} alt={`page ${pageNumber+1}`} style={{objectFit: 'contain'}} fill={true} />
+        <Image src={imgURLs[pageNumber]} alt={`page ${pageNumber+1}`} 
+                fill={true} 
+                objectFit='contain'
+        />
         <Box position={'absolute'} top={0} left={0} height={'100%'} width={'50%'} 
             onClick={() => controler({maxPage:maxPage, control:'prev'})}
             bg={'green'} opacity={'0.2'} zIndex={2}

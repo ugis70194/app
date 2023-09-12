@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{ useEffect, useState } from 'react'
 import { jsonLoader, typeBackgroundColor } from '../../_utils/functions'
 import { URL_PREFIX } from '../../_utils/variables'
 import { Box, HStack, Text } from '@kuma-ui/core'
 import SampleViewer from './_sampleViewer'
 
-interface Detail {
+export interface Detail {
   title: string,
   type?: string,
   description: string,
@@ -25,20 +25,16 @@ function concatString(string_array: string[]): string{
 }
 
 function sampleURLs(productPath: string, sampleCount: number): string[]{
-  let res:string[] = [];
+  let res: string[] = [];
   for(let i = 1; i <= sampleCount; i++){
     res.push(`${productPath}/sampleImages/${i}.jpg`);
   }
   return res;
 }
 
-export default async function Home({params}: {params : {projects: string, product: string}}){
-  const project = params.projects;
-  const title = params.product;
-  const detail: Detail = await jsonLoader(`${URL_PREFIX}/api/${project}/${title}/detail.json`);
-  let imgURLs = [`${URL_PREFIX}/api/${project}/${title}/cover.jpg`]
-                .concat(sampleURLs(`${URL_PREFIX}/api/${project}/${title}`, detail.sampleCount));
-
+export default function HomeMock({params}: {params: {detail: Detail, imgURLs: string[]}}){
+  const detail = params.detail;
+  const imgURLs = params.imgURLs;
   return (
     <Box>
       <HStack>
