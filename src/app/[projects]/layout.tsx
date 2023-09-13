@@ -6,8 +6,6 @@ import R18Switch from './_banner/_r18switch'
 import { css } from '@kuma-ui/core'
 import Link from 'next/link'
 
-
-
 export default function ProjectsLayout({
     children, 
     params
