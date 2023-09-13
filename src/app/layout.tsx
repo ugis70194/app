@@ -13,7 +13,7 @@ export default function RootLayout(
 {
   return (
     <html lang="jp" className={css `overflow-x: hidden`}>
-      <body suppressHydrationWarning={true} className={css `margin: 0`}>
+      <body suppressHydrationWarning={true}>
         {children}
       </body>
     </html>
