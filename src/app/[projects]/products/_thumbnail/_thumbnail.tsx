@@ -31,7 +31,7 @@ export default async function Thumbnail(
           </HStack>
         </Suspense>
         <Text p={4} textDecoration='underline'>{data.genre}</Text>
-        <Box position={'relative'} minHeight={'33vh'} p={0} m={0} bg={'silver'}>
+        <Box position={'relative'} minHeight={'33vh'} p={0} m={0} bg={'whitesmoke'}>
         {
           data.r18 ? <R18Image projectName={projectName} title={title} />
           : <Image src={`/api/${projectName}/${title}/cover.jpg`} style={{objectFit: 'contain'}} fill={true} alt={title} />
