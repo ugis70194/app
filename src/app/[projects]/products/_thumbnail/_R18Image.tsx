@@ -9,7 +9,7 @@ export default function R18Image(
   {projectName: string, title: string})
 {
   const { R18on } = useContext(R18Context);
-  const imageSrc = R18on ? `/${projectName}/${title}/cover.jpg` : `/icons/R-18_icon.svg`;
+  const imageSrc = R18on ? `/api/${projectName}/${title}/cover.jpg` : `/icons/R-18_icon.svg`;
 
   return (
     <Image src={imageSrc} style={{objectFit: 'contain'}} fill={true} alt={title} />
