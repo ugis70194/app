@@ -9,7 +9,7 @@ export interface Props {
 export default function MenuButton({isOpen, toggle}: Props) {
 
   return (
-    <Box height={'100%'} marginRight={'2rem'} onClick={toggle}>
+    <Box height={'100%'} marginRight={'auto'} onClick={toggle}>
       {
         isOpen
         ? <Image src='/icons/cross.svg' alt='menu open' height={'100%'} className={css `object-fit: scale-down`} />

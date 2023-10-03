@@ -29,12 +29,12 @@ export default function SampleViewer({ imgURLs }:{imgURLs: string[]}){
   const [pageNumber, controler] = useReducer(reducer, 0);
   const maxPage = imgURLs.length;
   return (
-    <VStack justifyContent={'center'} width={'90vw'} margin={'auto'}>
+    <VStack justifyContent={'center'} width={'100%'} margin={'auto'}>
       <Box position={'relative'} width={'100%'} maxWidth={'600px'} height={'80vh'} margin={'auto'} justifyContent={'center'}
       >
         <Image src={imgURLs[pageNumber]} alt={`page ${pageNumber+1}`} 
                 fill={true} 
-                objectFit='contain'
+                style={{objectFit:'contain'}}
         />
         <Box position={'absolute'} top={0} left={'5%'} height={'100%'} width={'45%'} 
             onClick={() => controler({maxPage:maxPage, control:'prev'})}

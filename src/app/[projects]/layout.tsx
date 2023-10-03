@@ -17,9 +17,10 @@ export default function ProjectsLayout({
   return (
     <R18ContextProvider>
       <Banner>
-        <Link href="/" className={css `text-decoration:none; height:100%; font-weight: bold; margin-right: auto;`}>抱華郷</Link>
-          <R18Switch />
+        <Link href="/" className={css `text-decoration:none; height:100%; font-weight: bold; margin-right: auto; `}>Home</Link>
+        <R18Switch />
         <Menu projectName={params.projects}/>
+        <div/>
       </Banner>
       <main>
         {children}

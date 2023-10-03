@@ -13,6 +13,7 @@ export default async function Banner({children}:{children: React.ReactNode}){
           justify-items: center; justify-content: flex-end; 
           align-items: center;
           gap: 1rem;
+          border-bottom: solid;
           `
         }
     >
