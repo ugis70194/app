@@ -1,5 +1,5 @@
-import { URL_PREFIX } from '../../_utils/variables'
-import { jsonLoader } from '../../_utils/functions'
+import { URL_PREFIX } from '../../../_utils/variables'
+import { jsonLoader } from '../../../_utils/functions'
 import React, { useEffect, useState } from 'react'
 import { Box, css } from '@kuma-ui/core'
 import Link from 'next/link'

@@ -1,5 +1,5 @@
-import { jsonLoader } from '../_utils/functions'
-import { URL_PREFIX } from '../_utils/variables'
+import { jsonLoader } from '../../_utils/functions'
+import { URL_PREFIX } from '../../_utils/variables'
 import ThumbnailTable from './_thumbnail/_thumbnailTable'
 import Thumbnail from './_thumbnail/_thumbnail'
 

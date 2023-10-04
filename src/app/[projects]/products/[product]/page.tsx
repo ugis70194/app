@@ -1,6 +1,6 @@
 import React, { use, Suspense } from 'react'
-import { jsonLoader, typeBackgroundColor } from '../../_utils/functions'
-import { URL_PREFIX } from '../../_utils/variables'
+import { jsonLoader, typeBackgroundColor } from '../../../_utils/functions'
+import { URL_PREFIX } from '../../../_utils/variables'
 import { Box, HStack, Text, styled, css } from '@kuma-ui/core'
 import SampleViewer from './_sampleViewer'
 

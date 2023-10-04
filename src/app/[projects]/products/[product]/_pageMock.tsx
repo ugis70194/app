@@ -1,5 +1,5 @@
 import React from 'react'
-import { typeBackgroundColor } from '../../_utils/functions'
+import { typeBackgroundColor } from '../../../_utils/functions'
 import { Box, HStack, Text, styled, css } from '@kuma-ui/core'
 import SampleViewer from './_sampleViewer'
 
