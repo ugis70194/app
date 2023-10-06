@@ -16,23 +16,17 @@ export default function MenuItems({
   //const productTypes = use(fetchProductTypes(project))
   const productTypes = ['ALL', 'イラスト', 'マンガ', '小説']
   return (
-  <Box className={css `
-    .menu-checkbox:checked ~ .menu-items {
-      transform: translateY(0);
-    }
-  `}>
-    <input type="checkbox" id="menu-toggle" className='menu-checkbox' />
-    <label htmlFor="menu-toggle" className='menu-button'>menu</label>
     <Box
+      zIndex={20}
       position={'relative'}
-      transform={'translateY(-200%)'}
       transition={'.5s'}
-      height={'90vh'}
+      height={'100%'}
       className='menu-items'  
     >
       <k.ul 
-        zIndex={20} m={'auto'} 
-        paddingLeft={'1rem'} paddingRight={'1rem'}>
+        m={'auto'} 
+        paddingLeft={'1rem'} 
+        paddingRight={'1rem'}>
       {
         (productTypes).map((type) => (
           <li key={type} className={css `list-style: none`} >
@@ -52,6 +46,5 @@ export default function MenuItems({
       }
       </k.ul>
     </Box>
-  </Box>
   )
 }
