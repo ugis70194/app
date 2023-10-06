@@ -1,5 +1,5 @@
-import { URL_PREFIX } from '../../_utils/variables'
-import { jsonLoader, typeBackgroundColor } from '../../_utils/functions'
+import { URL_PREFIX } from '../../../_utils/variables'
+import { jsonLoader, typeBackgroundColor } from '../../../_utils/functions'
 import { Box, Text, HStack, css } from "@kuma-ui/core";
 import R18Image from './_R18Image';
 import { Suspense } from 'react';
