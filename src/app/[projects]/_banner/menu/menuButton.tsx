@@ -1,7 +1,20 @@
 import React from 'react'
 import { Box, css } from '@kuma-ui/core'
 
-const style = css `
+export default function MenuButton(){
+  return (
+  <Box 
+    className={buttonStyle}
+  >
+    <input type="checkbox" id="menu-toggle" className='menu-checkbox' />
+    <label htmlFor="menu-toggle" className='menu-button'>
+      <span></span>
+    </label>
+  </Box>
+  )
+}
+
+const buttonStyle = css `
 .menu-checkbox {
   display: none;
   &:checked ~ .menu-button > span {
@@ -14,7 +27,7 @@ const style = css `
   &:checked ~ .menu-button > span::after {
     top: 0;
     transform: rotate(-90deg);
-  }
+  },
 },
 .menu-button {
   display: block;
@@ -45,16 +58,3 @@ const style = css `
   },
 },
 `
-
-export default function MenuButton(){
-  return (
-  <Box 
-    className={style}
-  >
-    <input type="checkbox" id="menu-toggle" className='menu-checkbox' />
-    <label htmlFor="menu-toggle" className='menu-button'>
-      <span></span>
-    </label>
-  </Box>
-  )
-}
