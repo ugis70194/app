@@ -3,7 +3,7 @@ import { css } from '@kuma-ui/core'
 
 export const BannerHeight = '8vh'
 
-export default async function Banner({children}:{children: React.ReactNode}){
+export default function Banner({children}:{children: React.ReactNode}){
   return (
     <nav className={
       css `display:flex; 
