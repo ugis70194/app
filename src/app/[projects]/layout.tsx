@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from './_banner/_banner'
-import Menu from './_banner/menu/_menu'
+import Menu from './_banner/menu/menu'
 import R18ContextProvider from './_r18ContextProvider'
 import R18Switch from './_banner/_r18switch'
 import { css } from '@kuma-ui/core'
