@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useContext } from 'react'
-import { R18Context } from '../_r18ContextProvider'
+import { R18Context } from '../../_r18ContextProvider'
 import { Box } from '@kuma-ui/core'
 
 export default function R18Switch() {
