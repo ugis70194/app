@@ -19,7 +19,7 @@ export default function ProjectsLayout({
       <Banner>
         <Link href="/" className={css `text-decoration:none; height:100%; font-weight: bold; margin-right: auto;`}>抱華郷</Link>
           <R18Switch />
-        <Menu projectName={params.projects}/>
+        <Menu project={params.projects}/>
       </Banner>
       <main>
         {children}
