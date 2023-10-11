@@ -1,23 +1,19 @@
 import React from 'react'
-import { css } from '@kuma-ui/core'
-
-export const BannerHeight = '8vh'
+import { k } from '@kuma-ui/core'
 
 export default function Banner({children}:{children: React.ReactNode}){
   return (
-    <nav className={
-      css `display:flex; 
-          position: sticky; top: 0; z-index: 20;
-          height: 8vh; width: 100vw; 
-          background-color: white;
-          justify-items: center; justify-content: flex-end; 
-          align-items: center;
-          gap: 1rem;
-          `
-        }
+    <k.nav
+    position={'sticky'}
+    display={'flex'}
+    justifyContent={'flex-end'}
+    top={0}
+    zIndex={20}
+    width={'100vw'}
+    gap={'2rem'}
     >
       {children}
-    </nav>
+    </k.nav>
     
   )
 }
