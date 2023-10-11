@@ -3,10 +3,6 @@ import { Box, Text, css } from '@kuma-ui/core'
 
 export default function R18Switch() {
   return (
-  <Box
-    display={'flex'}
-    justifyContent={'flex-end'} 
-  >
     <Box
       display={'flex'}
       justifyContent={'center'}
@@ -28,7 +24,6 @@ export default function R18Switch() {
         </Text>
       </label>
     </Box>
-  </Box>
   )
 }
 
