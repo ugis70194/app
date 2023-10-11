@@ -17,6 +17,7 @@ export default function Menu({project}: {project: string}){
 const animetion = css `
 .menu-items {
   transform: translateY(-200%);
+  left: 0;
 },
 div:has(input[class=menu-checkbox]:checked) ~ .menu-items {
   transform: translateY(0);
