@@ -8,15 +8,15 @@ export default function R18Switch() {
       justifyContent={'center'}
       alignItems={'center'} 
       textAlign={'center'}
-      width={'6rem'}
-      height={'3rem'}
+      width={'4rem'}
+      height={'2rem'}
       className={buttonStyle}
     >
       <input type="checkbox" id="r18-toggle" className='r18-checkbox' />
       <label htmlFor="r18-toggle" className='r18-button'>
         <Text 
           m={0}
-          lineHeight={'3rem'}
+          lineHeight={'2rem'}
           className={css `user-select: none;`} 
           bgColor={'transparent'}
         >
