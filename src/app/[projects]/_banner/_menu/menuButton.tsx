@@ -4,8 +4,6 @@ import { Box, css } from '@kuma-ui/core'
 export default function MenuButton(){
   return (
   <Box 
-    display={'flex'}
-    justifyContent={'flex-end'} 
     className={buttonStyle}
   >
     <input type="checkbox" id="menu-toggle" className='menu-checkbox' />
