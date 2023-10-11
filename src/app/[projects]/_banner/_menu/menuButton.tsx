@@ -32,8 +32,8 @@ const buttonStyle = css `
 .menu-button {
   display: block;
   position: relative;
-  width: 26px;
-  height: 26px;
+  width: 2rem;
+  height: 3rem;
   cursor: pointer;
   & > span, & > span::before, & > span::after{
     transition: .3s;
@@ -48,13 +48,17 @@ const buttonStyle = css `
       background-color: t("colors.icon_light");
     }
   },
+  & > span {
+    content: '';
+    top: 1.5rem;
+  }
   & > span::before {
     content: '';
-    top: -8px;
+    top: -0.5rem;
   },
   & > span::after {
     content: '';
-    top: 8px;
+    top: 0.5rem;
   },
 },
 `
