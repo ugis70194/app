@@ -18,6 +18,5 @@ export const Test: Story = {
   <Banner>
     <R18Switch />
     <Menu project='test' />
-    <div />
   </Banner>
 }
