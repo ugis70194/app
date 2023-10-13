@@ -1,23 +1,34 @@
 import React from 'react'
-import { css } from '@kuma-ui/core'
-
-export const BannerHeight = '8vh'
+import { css, k } from '@kuma-ui/core'
 
 export default function Banner({children}:{children: React.ReactNode}){
   return (
-    <nav className={
-      css `display:flex; 
-          position: sticky; top: 0; z-index: 20;
-          height: 8vh; width: 100vw; 
-          background-color: white;
-          justify-items: center; justify-content: flex-end; 
-          align-items: center;
-          gap: 1rem;
-          `
-        }
+    <k.nav
+    position={'sticky'}
+    display={'flex'}
+    justifyContent={'flex-end'}
+    alignItems={'center'}
+    top={0}
+    zIndex={20}
+    width={'calc(100vw - 32px)'}
+    height={'8vh'}
+    gap={'2rem'}
+    borderBottomStyle={'solid'}
+    className={mediaStyle}
     >
       {children}
-    </nav>
+    </k.nav>
     
   )
 }
+
+const mediaStyle = css `
+  @media (prefers-color-scheme: dark) {
+    background-color: t("colors.bg_dark");
+    border-color: t("colors.icon_dark");
+  },
+  @media (prefers-color-scheme: light) {
+    background-color: t("colors.bg_light");
+    border-color: t("colors.icon_light");
+  }
+`

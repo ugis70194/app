@@ -18,15 +18,16 @@ export default function MenuItems({
   return (
     <Box
       zIndex={20}
-      position={'relative'}
+      position={'absolute'}
       transition={'.5s'}
-      height={'100%'}
+      width={'calc(100vw - 32px)'}
+      height={'90vw'}
       className='menu-items'  
     >
       <k.ul 
         m={'auto'} 
-        paddingLeft={'1rem'} 
-        paddingRight={'1rem'}>
+        paddingLeft={0} 
+        paddingRight={0}>
       {
         (productTypes).map((type) => (
           <li key={type} className={css `list-style: none`} >
